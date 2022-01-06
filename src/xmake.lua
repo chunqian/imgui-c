@@ -1,0 +1,6 @@
+target("imgui")
+    set_kind("shared")
+    set_targetdir("$(buildir)/$(mode)")
+    add_includedirs(".")
+    add_files("*.cpp", "misc/freetype/*.cpp")
+target_end()

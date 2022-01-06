@@ -1,0 +1,4 @@
+# xmake
+.xmake/
+xmake.Build/
+compile_commands.json
