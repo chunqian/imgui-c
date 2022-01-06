@@ -101,6 +101,12 @@ void iggIoSetDisplaySize(IggIO handle, IggVec2 const *value)
    importValue(io->DisplaySize, *value);
 }
 
+void iggDisplaySize(IggIO handle, IggVec2 *value)
+{
+   ImGuiIO *io = reinterpret_cast<ImGuiIO *>(handle);
+   exportValue(*value, io->DisplaySize);
+}
+
 void iggIoSetDisplayFrameBufferScale(IggIO handle, IggVec2 const *value)
 {
    ImGuiIO *io = reinterpret_cast<ImGuiIO *>(handle);

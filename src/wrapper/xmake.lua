@@ -1,4 +1,4 @@
-target("imgui-c")
+target("imgui-wrapper")
     set_kind("shared")
     add_deps("imgui")
     set_targetdir("$(buildir)/$(mode)")

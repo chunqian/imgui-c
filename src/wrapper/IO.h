@@ -21,6 +21,7 @@ extern int iggMetricsActiveAllocations(IggIO handle);
 extern void iggMouseDelta(IggIO handle, IggVec2 *value);
 extern void iggMouseWheel(IggIO handle, float *mouseWheelH, float *mouseWheel);
 extern void iggDisplayFrameBufferScale(IggIO handle, IggVec2 *value);
+extern void iggDisplaySize(IggIO handle, IggVec2 *value);
 extern IggFontAtlas iggIoGetFonts(IggIO handle);
 
 extern void iggIoSetDisplaySize(IggIO handle, IggVec2 const *value);

@@ -31,9 +31,11 @@ set_config("cflags", "-std=c99 -x objective-c")
 -- 添加系统头文件搜索目录
 add_sysincludedirs(
     "/usr/local/include",
+    "/usr/local/include/SDL2",
     "/usr/local/include/libpng",
     "/usr/local/include/freetype2",
-    "include"
+    "include",
+    "src"
     )
 
 -- 添加链接库搜索目录
@@ -67,3 +69,7 @@ end)
 includes("src")
 -- wrapper
 includes("src/wrapper")
+-- backends
+includes("backends")
+-- demo
+includes("demo")
