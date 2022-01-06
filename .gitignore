@@ -1,4 +1,6 @@
 # xmake
 .xmake/
 xmake.Build/
+xmake.XcodeMac/
 compile_commands.json
+CMakeLists.txt

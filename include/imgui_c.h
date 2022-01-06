@@ -37,12 +37,4 @@
 #define IMGUI_IMPL_API              IMGUI_API
 #endif
 
-#if defined __cplusplus
-    #define EXTERN extern "C"
-#else
-    #include <stdarg.h>
-    #include <stdbool.h>
-    #define EXTERN extern
-#endif
-
 #endif

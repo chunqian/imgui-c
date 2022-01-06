@@ -91,8 +91,8 @@ int main(int argc, char* argv[])
     //IM_ASSERT(font != NULL);
 
     // Our state
-    bool show_demo_window = true;
-    bool show_another_window = false;
+    IggBool show_demo_window = true;
+    IggBool show_another_window = false;
     // IggVec4 clear_color = IggVec4(0.45f, 0.55f, 0.60f, 1.00f);
     IggVec4 clear_color;
     clear_color.x = 0.45f;
@@ -101,7 +101,7 @@ int main(int argc, char* argv[])
     clear_color.w = 1.00f;
 
     // Main loop
-    bool done = false;
+    IggBool done = false;
     while (!done)
     {
         // Poll and handle events (inputs, window resize, etc.)

@@ -110,7 +110,7 @@ static void ImGui_ImplSDL2_SetClipboardText(void*, const char* text)
 // - When io.WantCaptureKeyboard is true, do not dispatch keyboard input data to your main application.
 // Generally you may always pass all inputs to dear imgui, and hide them from your application based on those two flags.
 // If you have multiple SDL events and some of them are not meant to be used by dear imgui, you may need to filter events based on their windowID field.
-bool ImGui_ImplSDL2_ProcessEvent(const SDL_Event* event)
+IggBool ImGui_ImplSDL2_ProcessEvent(const SDL_Event* event)
 {
     ImGuiIO& io = ImGui::GetIO();
     ImGui_ImplSDL2_Data* bd = ImGui_ImplSDL2_GetBackendData();
@@ -251,13 +251,13 @@ static bool ImGui_ImplSDL2_Init(SDL_Window* window)
     return true;
 }
 
-bool ImGui_ImplSDL2_InitForOpenGL(SDL_Window* window, void* sdl_gl_context)
+IggBool ImGui_ImplSDL2_InitForOpenGL(SDL_Window* window, void* sdl_gl_context)
 {
     IM_UNUSED(sdl_gl_context); // Viewport branch will need this.
     return ImGui_ImplSDL2_Init(window);
 }
 
-bool ImGui_ImplSDL2_InitForVulkan(SDL_Window* window)
+IggBool ImGui_ImplSDL2_InitForVulkan(SDL_Window* window)
 {
 #if !SDL_HAS_VULKAN
     IM_ASSERT(0 && "Unsupported");
@@ -265,7 +265,7 @@ bool ImGui_ImplSDL2_InitForVulkan(SDL_Window* window)
     return ImGui_ImplSDL2_Init(window);
 }
 
-bool ImGui_ImplSDL2_InitForD3D(SDL_Window* window)
+IggBool ImGui_ImplSDL2_InitForD3D(SDL_Window* window)
 {
 #if !defined(_WIN32)
     IM_ASSERT(0 && "Unsupported");
@@ -273,12 +273,12 @@ bool ImGui_ImplSDL2_InitForD3D(SDL_Window* window)
     return ImGui_ImplSDL2_Init(window);
 }
 
-bool ImGui_ImplSDL2_InitForMetal(SDL_Window* window)
+IggBool ImGui_ImplSDL2_InitForMetal(SDL_Window* window)
 {
     return ImGui_ImplSDL2_Init(window);
 }
 
-bool ImGui_ImplSDL2_InitForSDLRenderer(SDL_Window* window)
+IggBool ImGui_ImplSDL2_InitForSDLRenderer(SDL_Window* window)
 {
     return ImGui_ImplSDL2_Init(window);
 }
