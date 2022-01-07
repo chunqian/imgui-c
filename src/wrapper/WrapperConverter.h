@@ -1,5 +1,8 @@
 #pragma once
 
+#include "Types.h"
+#include "imgui.h"
+
 extern void importValue(bool &out, IggBool const &in);
 extern void exportValue(IggBool &out, bool const &in);
 
