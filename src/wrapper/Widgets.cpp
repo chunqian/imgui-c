@@ -154,7 +154,7 @@ static int iggInputTextCallbackWrapper(ImGuiInputTextCallbackData *data)
 #else
 static int iggInputTextCallbackWrapper(ImGuiInputTextCallbackData *data)
 {
-   return NULL;
+   return 0;
 }
 #endif
 

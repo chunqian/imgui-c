@@ -71,5 +71,5 @@ includes("src")
 includes("src/wrapper")
 -- backends
 includes("backends")
--- demo
-includes("demo")
+-- examples
+includes("examples")

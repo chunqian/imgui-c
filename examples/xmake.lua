@@ -10,8 +10,8 @@ add_rpathdirs(".")
 -- 添加子工程目标依赖
 add_deps("imgui-wrapper", "imgui-backends")
 
-target("imgui_demo")
+target("example_sdl_opengl3")
     set_kind("binary")
     set_targetdir("$(buildir)/$(mode)")
     add_frameworks("OpenGL", "Cocoa", "IOKit", "CoreVideo")
-    add_files("*.c")
+    add_files("example_sdl_opengl3/*.c")
